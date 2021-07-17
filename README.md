@@ -1,2 +1,2 @@
 # Klipper
-E3 v2 config
+Creality Ender 3 v2 config
