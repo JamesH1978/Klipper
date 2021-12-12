@@ -1,2 +1,2 @@
 # Klipper
-Creality Ender 3 v2 config
+Configs and bins for SKR2 & Creality 4.2.x
