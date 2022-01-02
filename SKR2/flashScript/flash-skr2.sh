@@ -4,20 +4,19 @@ sudo service klipper stop
 sudo service moonraker stop
 
 cd $HOME/klipper
-#cp $HOME/rpi.config .config
+cp $HOME/flashScript/rpi.config .config # comment this out if you do not have a rpi secondary mcu
 
-#make clean
-#make flash
+make clean # comment this out if you do not have a rpi secondary mcu
+make flash # comment this out if you do not have a rpi secondary mcu
 
-cp $HOME/skr2.config .config
+cp $HOME/flashScript/skr2.config .config
 
 make clean
 make
-cp $HOME/board_defs.py $HOME/klipper/scripts/spi_flash/
+cp $HOME/flashScript/board_defs.py $HOME/klipper/scripts/spi_flash/
 
 #gpio write 25 1
-# ./scripts/flash-sdcard.sh /dev/serial/by-id/usb-Klipper_stm32f407xx_400024001047393438343535-if00 btt-skr-2
-./scripts/flash-sdcard.sh /dev/serial/by-id/usb-Klipper_stm32f407xx_400024001047393438343535-if00 btt-skr-2
+./scripts/flash-sdcard.sh /dev/<add your path to the board here> btt-skr-2
 cd $HOME/klipper/scripts/spi_flash; git checkout board_defs.py
 
 sudo service klipper start
