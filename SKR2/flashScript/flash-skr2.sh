@@ -9,7 +9,8 @@ cp $HOME/flashScript/rpi.config .config # comment this out if you do not have a 
 make clean # comment this out if you do not have a rpi secondary mcu
 make flash # comment this out if you do not have a rpi secondary mcu
 
-cp $HOME/flashScript/skr2.config .config
+cp $HOME/flashScript/skr2.config .config #uncomment/comment foe your version of the board
+#cp $HOME/flashScript/skr2429.config .config
 
 make clean
 make
